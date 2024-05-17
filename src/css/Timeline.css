@@ -1,0 +1,18 @@
+.timeline .p-timeline-event {
+  min-height: 2em;
+}
+
+.timeline .p-timeline-marker {
+  border: #1581ed;
+  background-color: #1581ed;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+.timeline .p-timeline-connector {
+  height: 1rem;
+}
+
+.timeline .p-timeline-content {
+  height: 0.5rem;
+  font-size: smaller;
+}
