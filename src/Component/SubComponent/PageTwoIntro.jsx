@@ -94,7 +94,7 @@ const PageTwoIntro = () => {
     },
   ];
   return (
-    <div className="flex flex-col h-screen bg-white">
+    <div className="flex flex-col h-screen bg-white pb-4">
       <div className="h-10 mt-16 flex justify-center mb-1"></div>
       <div className="flex-1">
         <Splitter className="w-full h-full">
@@ -286,7 +286,7 @@ const PageTwoIntro = () => {
         <h3 className="flex text-2xl font-sans font-semibold justify-center">
           Certificates
         </h3>
-        <div className="card pt-2 mx-5">
+        <div className="card pt-2 mx-5 mb-3">
           <Carousel
             value={certificates}
             autoplayInterval={3000}

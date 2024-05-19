@@ -1,4 +1,5 @@
 // cv builder
+export { default as cv } from "../images/Projects-images/resume/cv.png";
 export { default as cv1 } from "../images/Projects-images/resume/cv1.png";
 export { default as cv2 } from "../images/Projects-images/resume/Cv2.png";
 export { default as cv3 } from "../images/Projects-images/resume/Cv3.png";
@@ -31,6 +32,7 @@ export { default as dar3 } from "../images/Projects-images/darline/dar3.png";
 export { default as dj } from "../images/Projects-images/django-resume/dj.png";
 export { default as dj1 } from "../images/Projects-images/django-resume/dj1.png";
 export { default as dj2 } from "../images/Projects-images/django-resume/dj2.png";
+export { default as dj3 } from "../images/Projects-images/django-resume/dj3.png";
 
 // drf-curd
 export { default as drf } from "../images/Projects-images/drf-curd/drf.png";
@@ -40,10 +42,12 @@ export { default as drf1 } from "../images/Projects-images/drf-curd/drf1.png";
 export { default as ecom } from "../images/Projects-images/e-com/shop1.png";
 export { default as ecom1 } from "../images/Projects-images/e-com/shop2.png";
 export { default as ecom2 } from "../images/Projects-images/e-com/shop3.png";
+export { default as ecom3 } from "../images/Projects-images/e-com/shop4.png";
 
 // password
-export { default as pwd } from "../images/Projects-images/password-generator/pwd1.PNG";
-export { default as pwd1 } from "../images/Projects-images/password-generator/pwd2.PNG";
+export { default as pwd } from "../images/Projects-images/password-generator/pwd.png";
+export { default as pwd1 } from "../images/Projects-images/password-generator/pwd1.PNG";
+export { default as pwd2 } from "../images/Projects-images/password-generator/pwd2.PNG";
 
 // piroll
 export { default as piroll } from "../images/Projects-images/piroll/pi.png";
@@ -64,6 +68,24 @@ export { default as todo2 } from "../images/Projects-images/todo/todo2.png";
 export { default as todo3 } from "../images/Projects-images/todo/todo3.png";
 export { default as todo4 } from "../images/Projects-images/todo/todo4.png";
 export { default as todo5 } from "../images/Projects-images/todo/todo5.png";
+
+// clove
+export { default as clove } from "../images/Projects-images/clove-cart/clove.png";
+export { default as clove1 } from "../images/Projects-images/clove-cart/clove1.png";
+export { default as clove2 } from "../images/Projects-images/clove-cart/clove2.png";
+export { default as clove3 } from "../images/Projects-images/clove-cart/clove3.png";
+
+// weather
+export { default as weather } from "../images/Projects-images/weather/weather.png";
+export { default as weather1 } from "../images/Projects-images/weather/weather1.png";
+export { default as weather2 } from "../images/Projects-images/weather/weather2.png";
+export { default as weather3 } from "../images/Projects-images/weather/weather3.png";
+export { default as weather4 } from "../images/Projects-images/weather/weather4.png";
+
+// doggy
+export { default as dog } from "../images/Projects-images/dog-gallery/dog.png";
+export { default as dog1 } from "../images/Projects-images/dog-gallery/dog1.png";
+export { default as dog2 } from "../images/Projects-images/dog-gallery/dog2.png";
 
 // Certificates
 export { default as c_plus_plus } from "../images/Certificates/c_plus_solo.png";

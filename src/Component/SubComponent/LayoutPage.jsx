@@ -2,7 +2,7 @@ import React from 'react';
 
 const LayoutPage = ({ sections, activePage }) => {
   return (
-    <div className="fixed left-4 top-1/2 transform -translate-y-1/2 flex flex-col items-center space-y-8">
+    <div className="fixed left-4 top-1/3 transform -translate-y-1/2 flex flex-col items-center space-y-8">
       <div className="relative flex flex-col items-center space-y-8">
         {sections.map((section, index) => (
           <div key={section.id} className="relative flex flex-col items-center">

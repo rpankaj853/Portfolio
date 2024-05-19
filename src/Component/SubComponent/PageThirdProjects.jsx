@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "primereact/button";
 import { Galleria } from "primereact/galleria";
 import {
+  cv,
   cv1,
   cv2,
   cv3,
@@ -29,11 +30,13 @@ import {
   dj,
   dj1,
   dj2,
+  dj3,
   drf,
   drf1,
   ecom,
   ecom1,
   ecom2,
+  ecom3,
   finder,
   finder1,
   finder2,
@@ -44,12 +47,25 @@ import {
   piroll4,
   pwd,
   pwd1,
+  pwd2,
   todo,
   todo1,
   todo2,
   todo3,
   todo4,
   todo5,
+  weather,
+  weather1,
+  weather2,
+  weather3,
+  weather4,
+  clove,
+  clove1,
+  clove2,
+  clove3,
+  dog,
+  dog1,
+  dog2,
 } from "../../helper/common-images";
 
 import "../../css/galleria.css";
@@ -64,12 +80,28 @@ const PageThirdProjects = () => {
       alt: "Image 1",
       name: "todo",
       category: "FE",
-      Label: "Todo List",
+      Label: "To-do App",
       skills: "React / Python",
     },
     {
-      src: cv1,
+      src: clove,
       alt: "Image 2",
+      name: "clove",
+      category: "FE",
+      Label: "Clove E-Cart",
+      skills: "React / Python",
+    },
+    {
+      src: weather,
+      alt: "Image 3",
+      name: "weather",
+      category: "FE",
+      Label: "Weather App",
+      skills: "Html / Boostrap",
+    },
+    {
+      src: cv,
+      alt: "Image 4",
       name: "cv",
       category: "BE",
       Label: "CV Builder",
@@ -77,7 +109,7 @@ const PageThirdProjects = () => {
     },
     {
       src: app,
-      alt: "Image 3",
+      alt: "Image 5",
       name: "app",
       category: "FE",
       Label: "AppLab",
@@ -85,7 +117,7 @@ const PageThirdProjects = () => {
     },
     {
       src: con,
-      alt: "Image 4",
+      alt: "Image 6",
       name: "converter",
       category: "FE",
       Label: "Converter",
@@ -93,15 +125,15 @@ const PageThirdProjects = () => {
     },
     {
       src: dar1,
-      alt: "Image 5",
+      alt: "Image 7",
       name: "darling",
       category: "FE",
       Label: "Darling Web App",
       skills: "Bootsrap",
     },
     {
-      src: dj,
-      alt: "Image 6",
+      src: dj3,
+      alt: "Image 8",
       name: "django",
       category: "BE",
       Label: "Django Portfolio",
@@ -109,15 +141,15 @@ const PageThirdProjects = () => {
     },
     {
       src: drf,
-      alt: "Image 7",
+      alt: "Image 9",
       name: "drf",
       category: "BE",
       Label: "DRF",
       skills: "Django RestFramework",
     },
     {
-      src: ecom,
-      alt: "Image 8",
+      src: ecom3,
+      alt: "Image 10",
       name: "eCom",
       category: "FE",
       Label: "E Commerce",
@@ -125,7 +157,7 @@ const PageThirdProjects = () => {
     },
     {
       src: pwd,
-      alt: "Image 9",
+      alt: "Image 11",
       name: "pwd",
       category: "BE",
       Label: "Password Generator",
@@ -133,11 +165,19 @@ const PageThirdProjects = () => {
     },
     {
       src: piroll,
-      alt: "Image 10",
+      alt: "Image 12",
       name: "piroll",
       category: "FE",
       Label: "Piroll Webapp",
       skills: "React / Boostrap",
+    },
+    {
+      src: dog,
+      alt: "Image 13",
+      name: "dog",
+      category: "FE",
+      Label: "Dog Gallery",
+      skills: "html / Css",
     },
     // { src: finder, alt: "Image 11", name: "siteFinder", category: "BE" },
   ];
@@ -147,6 +187,7 @@ const PageThirdProjects = () => {
       title: "CV Builder",
       desc: "Empower job seekers with a user-friendly platform for creating professional resumes. Optimize chances in the job market with customizable templates and intuitive tools",
       imagesList: [
+        { src: cv, alt: "Image 1" },
         { src: cv1, alt: "Image 1" },
         { src: cv2, alt: "Image 2" },
         { src: cv3, alt: "Image 3" },
@@ -195,6 +236,7 @@ const PageThirdProjects = () => {
         { src: dj, alt: "Image 1" },
         { src: dj1, alt: "Image 2" },
         { src: dj2, alt: "Image 3" },
+        { src: dj3, alt: "Image 3" },
       ],
     },
     drf: {
@@ -209,6 +251,7 @@ const PageThirdProjects = () => {
       title: "ECommerce",
       desc: "Revolutionize online shopping with a dynamic platform offering secure transactions and personalized recommendations. Explore a diverse range of products hassle-free.",
       imagesList: [
+        { src: ecom3, alt: "Image 3" },
         { src: ecom, alt: "Image 1" },
         { src: ecom1, alt: "Image 2" },
         { src: ecom2, alt: "Image 3" },
@@ -220,6 +263,7 @@ const PageThirdProjects = () => {
       imagesList: [
         { src: pwd, alt: "Image 1" },
         { src: pwd1, alt: "Image 2" },
+        { src: pwd2, alt: "Image 2" },
       ],
     },
     piroll: {
@@ -243,7 +287,7 @@ const PageThirdProjects = () => {
       ],
     },
     todo: {
-      title: "Todo List",
+      title: "To-do List",
       desc: "Organize tasks efficiently and boost productivity with our intuitive manager. Set priorities, track progress, and tackle goals seamlessly",
       imagesList: [
         { src: todo, alt: "Image 1" },
@@ -252,6 +296,36 @@ const PageThirdProjects = () => {
         { src: todo3, alt: "Image 1" },
         { src: todo4, alt: "Image 2" },
         { src: todo5, alt: "Image 3" },
+      ],
+    },
+    weather: {
+      title: "Weather App",
+      desc: "A weather project collects and analyzes atmospheric data to predict conditions like temperature and precipitation",
+      imagesList: [
+        { src: weather, alt: "Image 1" },
+        { src: weather1, alt: "Image 2" },
+        { src: weather2, alt: "Image 3" },
+        { src: weather3, alt: "Image 1" },
+        { src: weather4, alt: "Image 2" },
+      ],
+    },
+    clove: {
+      title: "Clove E-Cart",
+      desc: "Clove E-Cart is an online platform for purchasing a wide range of clothing and accessories, offering stylish options and convenient delivery.",
+      imagesList: [
+        { src: clove, alt: "Image 1" },
+        { src: clove1, alt: "Image 2" },
+        { src: clove2, alt: "Image 3" },
+        { src: clove3, alt: "Image 1" },
+      ],
+    },
+    dog: {
+      title: "Dog Gallery",
+      desc: "Dog Gallery is an online platform showcasing a variety of dog breeds, featuring photos, descriptions, and care tips.",
+      imagesList: [
+        { src: dog, alt: "Image 1" },
+        { src: dog1, alt: "Image 2" },
+        { src: dog2, alt: "Image 3" },
       ],
     },
   };
@@ -293,39 +367,36 @@ const PageThirdProjects = () => {
   return (
     <div className="w-screen h-auto overflow-clip bg-customGray ">
       <div className=" h-auto flex items-end justify-center">
-        <h3 className="flex text-4xl font-sans font-semibold justify-center  mt-32">
+        <h3 className="flex text-4xl font-sans font-semibold justify-center mt-14">
           PROJECTS
         </h3>
       </div>
       <div className=" h-auto mt-4 ">
-        <TabView className="  mx-60 ">
+        <TabView className="  mx-60  pb-5" scrollable>
           <TabPanel header="All" className="bg-customGray">
-            <div className="flex flex-wrap">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-3 rounded-md ">
               {images.map((image, index) => (
-                <div className="flex-auto m-2 cursor-pointer relative">
-                  <Button className="h-full">
-                    <div
-                      className="relative group"
-                      onClick={() => handleImageClick(image.name)}
-                    >
+                <div className="flex-auto m-2 cursor-pointer shadow-xl relative">
+                  <Button
+                    className="w-full h-auto"
+                    onClick={() => handleImageClick(image.name)}
+                  >
+                    <div className="relative group w-full h-full">
                       <Image
-                        key={index}
                         src={image.src}
                         alt={image.alt}
-                        width="300"
-                        height="500"
+                        width="100%"
+                        height="auto"
                         onClick={() => handleImageClick(image.name)}
-                        className="cursor-pointer"
-                        imageClassName="h-44"
+                        className="cursor-pointer object-cover w-full h-full"
+                        imageClassName="cursor-pointer object-cover w-full h-full"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center  opacity-0 bg-white group-hover:opacity-100 transition-opacity">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-white group-hover:opacity-100 transition-opacity">
                         <div>
-                          <p className="text-black text-center text-2xl font-semibold">
+                          <p className="text-black text-center text-1xl font-semibold">
                             {image.Label}
                           </p>
-                          <p className=" text-customLightAqua">
-                            {image.skills}
-                          </p>
+                          <p className="text-customLightAqua">{image.skills}</p>
                         </div>
                       </div>
                     </div>
@@ -335,32 +406,30 @@ const PageThirdProjects = () => {
             </div>
           </TabPanel>
           <TabPanel header="FRONTEND">
-            <div className="flex flex-wrap ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-3 rounded-md ">
               {images
                 .filter((image) => image.category === "FE")
                 .map((image, index) => (
                   <div className="flex-auto m-2 cursor-pointer shadow-xl relative">
-                    <Button className="h-full">
-                      <div
-                        className="relative group"
-                        onClick={() => handleImageClick(image.name)}
-                      >
+                    <Button
+                      className="w-full h-auto p-0"
+                      onClick={() => handleImageClick(image.name)}
+                    >
+                      <div className="relative group w-full h-full">
                         <Image
-                          key={index}
                           src={image.src}
                           alt={image.alt}
-                          width="300"
-                          height="500"
+                          width="100%"
+                          height="auto"
                           onClick={() => handleImageClick(image.name)}
-                          className="cursor-pointer"
-                          imageClassName="h-44"
+                          className="cursor-pointer object-cover w-full h-full"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center  opacity-0 bg-white group-hover:opacity-100 transition-opacity">
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-white group-hover:opacity-100 transition-opacity">
                           <div>
                             <p className="text-black text-center text-2xl font-semibold">
                               {image.Label}
                             </p>
-                            <p className=" text-customLightAqua">
+                            <p className="text-customLightAqua">
                               {image.skills}
                             </p>
                           </div>
@@ -372,32 +441,30 @@ const PageThirdProjects = () => {
             </div>
           </TabPanel>
           <TabPanel header="BACKEND">
-            <div className="flex flex-wrap">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-3 rounded-md ">
               {images
                 .filter((image) => image.category === "BE")
                 .map((image, index) => (
                   <div className="flex-auto m-2 cursor-pointer shadow-xl relative">
-                    <Button className="h-full">
-                      <div
-                        className="relative group"
-                        onClick={() => handleImageClick(image.name)}
-                      >
+                    <Button
+                      className="w-full h-auto p-0"
+                      onClick={() => handleImageClick(image.name)}
+                    >
+                      <div className="relative group w-full h-full">
                         <Image
-                          key={index}
                           src={image.src}
                           alt={image.alt}
-                          width="300"
-                          height="500"
+                          width="100%"
+                          height="auto"
                           onClick={() => handleImageClick(image.name)}
-                          className="cursor-pointer"
-                          imageClassName="h-44"
+                          className="cursor-pointer object-cover w-full h-full"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center  opacity-0 bg-white group-hover:opacity-100 transition-opacity">
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-white group-hover:opacity-100 transition-opacity">
                           <div>
                             <p className="text-black text-center text-2xl font-semibold">
                               {image.Label}
                             </p>
-                            <p className=" text-customLightAqua">
+                            <p className="text-customLightAqua">
                               {image.skills}
                             </p>
                           </div>

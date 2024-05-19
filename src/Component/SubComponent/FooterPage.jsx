@@ -22,7 +22,7 @@ const FooterPage = () => {
     }
   };
   return (
-    <div className=" h-36 flex justify-center items-start bg-white">
+    <div className=" h-36 flex justify-center items-start bg-white pt-3">
       <div>
         <div className="flex space-x-8">
           <Button

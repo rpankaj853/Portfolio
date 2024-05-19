@@ -5,6 +5,7 @@ import LayoutPage from "./SubComponent/LayoutPage";
 import PageThirdProjects from "./SubComponent/PageThirdProjects";
 import FooterPage from "./SubComponent/FooterPage";
 import "../App.css";
+import ScreenSizeWarning from "./SubComponent/ScreenSizeWarning";
 
 const HomePage = () => {
   const [activePage, setActivePage] = useState("PageOne");
@@ -44,22 +45,27 @@ const HomePage = () => {
 
   return (
     <>
-      <div
-        className={`transition-opacity duration-500 ${
-          activePage !== "PageOne" ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <LayoutPage sections={sections} activePage={activePage} />
-      </div>
-      <div ref={pageOneRef}>
-        <PageOne id="particles" />
-      </div>
-      <div ref={pageTwoIntroRef}>
-        <PageTwoIntro />
-      </div>
-      <div ref={projectsRef}>
-        <PageThirdProjects />
-        <FooterPage />
+      <div className="App">
+        <ScreenSizeWarning />
+        <div className="hidden md:block">
+          <div
+            className={`transition-opacity duration-500 ${
+              activePage !== "PageOne" ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <LayoutPage sections={sections} activePage={activePage} />
+          </div>
+          <div ref={pageOneRef}>
+            <PageOne id="particles" />
+          </div>
+          <div ref={pageTwoIntroRef}>
+            <PageTwoIntro />
+          </div>
+          <div ref={projectsRef}>
+            <PageThirdProjects />
+            <FooterPage />
+          </div>
+        </div>
       </div>
     </>
   );
