@@ -99,7 +99,7 @@ const PageTwoIntro = () => {
       <div className="flex-1">
         <Splitter className="w-full h-full">
           <SplitterPanel className="flex justify-center">
-            <div class=" mx-10 ml-14">
+            <div className=" mx-10 ml-14">
               <Image
                 src={myPic}
                 preview
@@ -109,7 +109,7 @@ const PageTwoIntro = () => {
                 imageClassName=" flex justify-center"
               />
               <div className="">
-                <p class=" text-zinc-500">Who's this guy?</p>
+                <p className=" text-zinc-500">Who's this guy?</p>
                 <p>
                   With over three years of professional experience under my
                   belt, I've become a proficient full stack engineer,
@@ -125,14 +125,14 @@ const PageTwoIntro = () => {
             </div>
           </SplitterPanel>
           <SplitterPanel className="mb-3">
-            <div class="flex flex-wrap">
+            <div className="flex flex-wrap">
               <div className="flex justify-center h-12 mb-3 w-full">
                 <p className=" text-2xl !h-6 font-sans font-semibold">
                   Technologies I've Worked With
                 </p>
               </div>
               <div className="w-full h-full mx-5">
-                <div class="grid grid-cols-4 gap-0">
+                <div className="grid grid-cols-4 gap-0">
                   <div className="flex flex-col items-center shadow-md m-2 rounded-lg">
                     <Image
                       src={reactJS}
