@@ -110,7 +110,7 @@ export { default as nodeJs } from "../images/Certificates/nodeJS.jpg";
 export { default as reactJS } from "../images/logos/React.webp";
 export { default as django } from "../images/logos/django-logo.png";
 export { default as python } from "../images/logos/python.webp";
-export { default as primereact } from "../images/logos/primereact-logo.png";
+export { default as docker } from "../images/logos/docker.png";
 export { default as html } from "../images/logos/html.jpeg";
 export { default as css } from "../images/logos/css.jpeg";
 export { default as bootstrap } from "../images/logos/bootstrap.png";

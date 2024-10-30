@@ -24,7 +24,7 @@ import {
   reactJS,
   django,
   python,
-  primereact,
+  docker,
   html,
   css,
   bootstrap,
@@ -133,7 +133,7 @@ const PageTwoIntro = () => {
               </div>
               <div className="w-full h-full mx-5">
                 <div className="grid grid-cols-4 gap-0">
-                  <div className="flex flex-col items-center shadow-md m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg">
                     <Image
                       src={reactJS}
                       alt="Image"
@@ -145,31 +145,7 @@ const PageTwoIntro = () => {
                       React JS
                     </div>
                   </div>
-                  <div className="flex flex-col items-center shadow-md m-2">
-                    <Image
-                      src={django}
-                      alt="Image"
-                      width="90"
-                      preview
-                      imageClassName="rounded-full"
-                    />
-                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
-                      Django
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center shadow-md m-2 rounded-lg ">
-                    <Image
-                      src={react_saga}
-                      alt="Image"
-                      width="60"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
-                      Redux & Saga
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center shadow-md m-2 rounded-lg ">
+                  <div className="flex flex-col justify-center items-center shadow-md m-2">
                     <Image
                       src={python}
                       alt="Image"
@@ -181,30 +157,7 @@ const PageTwoIntro = () => {
                       Python
                     </div>
                   </div>
-
-                  <div className="flex flex-col items-center shadow-md m-2 rounded-lg ">
-                    <Image
-                      src={html}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center">Html</div>
-                  </div>
-                  <div className="flex flex-col items-center  shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={css}
-                      alt="Image"
-                      width="70"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center font-sans font-semibold">
-                      Css
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
                     <Image
                       src={js}
                       alt="Image"
@@ -216,7 +169,54 @@ const PageTwoIntro = () => {
                       JavaScript
                     </div>
                   </div>
-                  <div className="flex flex-col items-center shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
+                    <Image
+                      src={django}
+                      alt="Image"
+                      width="90"
+                      preview
+                      imageClassName="rounded-full"
+                    />
+                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
+                      Django
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
+                    <Image
+                      src={html}
+                      alt="Image"
+                      width="50"
+                      preview
+                      imageClassName="!rounded-full"
+                    />
+                    <div className="mt-2 text-center">Html</div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center  shadow-md mt-3 m-2 rounded-lg">
+                    <Image
+                      src={css}
+                      alt="Image"
+                      width="70"
+                      preview
+                      imageClassName="!rounded-full"
+                    />
+                    <div className="mt-2 text-center font-sans font-semibold">
+                      Css
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
+                    <Image
+                      src={react_saga}
+                      alt="Image"
+                      width="60"
+                      preview
+                      imageClassName="!rounded-full"
+                    />
+                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
+                      Redux & Saga
+                    </div>
+                  </div>
+                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
                     <Image
                       src={bootstrap}
                       alt="Image"
@@ -228,7 +228,7 @@ const PageTwoIntro = () => {
                       Bootstrap
                     </div>
                   </div>
-                  <div className="flex flex-col items-center shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
                     <Image
                       src={drf_logo}
                       alt="Image"
@@ -240,19 +240,19 @@ const PageTwoIntro = () => {
                       Django Rest Framework
                     </div>
                   </div>
-                  <div className="flex flex-col items-center shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
                     <Image
-                      src={primereact}
+                      src={docker}
                       alt="Image"
                       width="50"
                       preview
-                      imageClassName="!rounded-full"
+                      imageClassName="!rounded-full mt-2 text-sm"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
-                      Prime React
+                    <div className="mt-2 text-center  font-sans font-semibold">
+                      Docker
                     </div>
                   </div>
-                  <div className="flex flex-col items-center shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
                     <Image
                       src={graphql}
                       alt="Image"
@@ -260,11 +260,11 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
+                    <div className="mt-2 text-center justify-center font-sans font-semibold">
                       GraphQl
                     </div>
                   </div>
-                  <div className="flex flex-col items-center shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
                     <Image
                       src={pgadmin}
                       alt="Image"
