@@ -88,6 +88,7 @@ export { default as dog1 } from "../images/Projects-images/dog-gallery/dog1.png"
 export { default as dog2 } from "../images/Projects-images/dog-gallery/dog2.png";
 
 // Certificates
+export { default as mongoDB } from "../images/Certificates/mongodb.jpg";
 export { default as c_plus_plus } from "../images/Certificates/c_plus_solo.png";
 export { default as reactHacker } from "../images/Certificates/reactHacker.png";
 export { default as html5 } from "../images/Certificates/html5.jpg";
@@ -111,8 +112,9 @@ export { default as reactJS } from "../images/logos/React.webp";
 export { default as django } from "../images/logos/django-logo.png";
 export { default as python } from "../images/logos/python.webp";
 export { default as docker } from "../images/logos/docker.png";
-export { default as html } from "../images/logos/html.jpeg";
-export { default as css } from "../images/logos/css.jpeg";
+// export { default as html } from "../images/logos/html.jpeg";
+export { default as mongodb } from "../images/logos/mongodb.svg";
+export { default as html_css } from "../images/logos/html_css.png";
 export { default as bootstrap } from "../images/logos/bootstrap.png";
 export { default as drf_logo } from "../images/logos/drf.png";
 export { default as pgadmin } from "../images/logos/postgress.svg";

@@ -7,8 +7,8 @@ import myPic from "../../images/mypic2.png";
 
 import {
   c_plus_plus,
-  html5,
   cssSolo,
+  html5,
   djPython,
   djUdemy,
   htmlSolo,
@@ -25,8 +25,8 @@ import {
   django,
   python,
   docker,
-  html,
-  css,
+  html_css,
+  mongodb,
   bootstrap,
   drf_logo,
   pgadmin,
@@ -35,6 +35,7 @@ import {
   react_saga,
   apolloGraphql,
   nodeJs,
+  mongoDB,
 } from "../../helper/common-images";
 
 const PageTwoIntro = () => {
@@ -42,7 +43,7 @@ const PageTwoIntro = () => {
     { src: pythonHacker, alt: "Certificate 1" },
     { src: reactHacker, alt: "Certificate 2" },
     { src: apolloGraphql, alt: "Certificate 3" },
-    { src: djPython, alt: "Certificate 4" },
+    { src: mongoDB, alt: "Certificate 4" },
     { src: djUdemy, alt: "Certificate 5" },
     { src: nodeJs, alt: "Certificate 6" },
     { src: jQuerySolo, alt: "Certificate 7" },
@@ -56,6 +57,7 @@ const PageTwoIntro = () => {
     { src: fullStackUdemy, alt: "Certificate 15" },
     { src: cssSolo, alt: "Certificate 16" },
     { src: htmlSolo, alt: "Certificate 17" },
+    { src: djPython, alt: "Certificate 18" },
   ];
 
   const renderCarouselItem = (certificate) => {
@@ -135,14 +137,14 @@ const PageTwoIntro = () => {
                 <div className="grid grid-cols-4 gap-0">
                   <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg">
                     <Image
-                      src={reactJS}
+                      src={django}
                       alt="Image"
-                      width="50"
+                      width="90"
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-1xl font-sans font-semibold text-center ">
-                      React JS
+                    <div className="mt-2 font-sans text-sm font-semibold text-center ">
+                      Django
                     </div>
                   </div>
                   <div className="flex flex-col justify-center items-center shadow-md m-2">
@@ -153,7 +155,7 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
+                    <div className="mt-2 text-1xl font-sans text-sm font-semibold text-center">
                       Python
                     </div>
                   </div>
@@ -165,54 +167,56 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
+                    <div className="mt-2 text-center text-sm font-sans font-semibold">
                       JavaScript
                     </div>
                   </div>
                   <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
                     <Image
-                      src={django}
+                      src={reactJS}
                       alt="Image"
-                      width="90"
+                      width="50"
                       preview
                       imageClassName="rounded-full"
                     />
-                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
-                      Django
+                    <div className="mt-2 text-1xl font-sans text-sm font-semibold text-center">
+                      React JS
                     </div>
                   </div>
 
                   <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
                     <Image
-                      src={html}
+                      src={html_css}
                       alt="Image"
                       width="50"
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center">Html</div>
+                    <div className="mt-2 font-sans text-sm font-semibold text-center">
+                      HTML/CSS
+                    </div>
                   </div>
-                  <div className="flex flex-col justify-center items-center  shadow-md mt-3 m-2 rounded-lg">
+                  <div className="flex flex-col justify-center items-center  shadow-md m-2 rounded-lg">
                     <Image
-                      src={css}
+                      src={mongodb}
                       alt="Image"
-                      width="70"
+                      width="50"
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
-                      Css
+                    <div className="mt-2 text-center text-sm font-sans font-semibold">
+                      MongoDB
                     </div>
                   </div>
                   <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
                     <Image
                       src={react_saga}
                       alt="Image"
-                      width="60"
+                      width="65"
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-1xl font-sans font-semibold text-center">
+                    <div className="mt-2 text-1xl font-sans text-sm font-semibold text-center">
                       Redux & Saga
                     </div>
                   </div>
@@ -224,7 +228,7 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
+                    <div className="mt-2 text-center text-sm font-sans font-semibold">
                       Bootstrap
                     </div>
                   </div>
@@ -236,8 +240,8 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
-                      Django Rest Framework
+                    <div className="mt-2 text-center text-sm font-sans font-semibold">
+                      DRF
                     </div>
                   </div>
                   <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
@@ -248,7 +252,7 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full mt-2 text-sm"
                     />
-                    <div className="mt-2 text-center  font-sans font-semibold">
+                    <div className="mt-2 text-center text-sm  font-sans font-semibold">
                       Docker
                     </div>
                   </div>
@@ -260,7 +264,7 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center justify-center font-sans font-semibold">
+                    <div className="mt-2 text-center text-sm justify-center font-sans font-semibold">
                       GraphQl
                     </div>
                   </div>
@@ -272,7 +276,7 @@ const PageTwoIntro = () => {
                       preview
                       imageClassName="!rounded-full"
                     />
-                    <div className="mt-2 text-center font-sans font-semibold">
+                    <div className="mt-2 text-center text-sm font-sans font-semibold">
                       PostgreSQL
                     </div>
                   </div>
