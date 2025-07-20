@@ -106,6 +106,7 @@ export { default as sqlSolo } from "../images/Certificates/sql_solo.png";
 export { default as fullStackUdemy } from "../images/Certificates/fullstack_udemy.jpeg";
 export { default as apolloGraphql } from "../images/Certificates/apolloGraphql.jpg";
 export { default as nodeJs } from "../images/Certificates/nodeJS.jpg";
+export { default as genAI } from "../images/Certificates/genAI.jpg";
 
 // logos
 export { default as reactJS } from "../images/logos/React.webp";

@@ -36,6 +36,7 @@ import {
   apolloGraphql,
   nodeJs,
   mongoDB,
+  genAI,
 } from "../../helper/common-images";
 
 const PageTwoIntro = () => {
@@ -58,6 +59,7 @@ const PageTwoIntro = () => {
     { src: cssSolo, alt: "Certificate 16" },
     { src: htmlSolo, alt: "Certificate 17" },
     { src: djPython, alt: "Certificate 18" },
+    { src: genAI, alt: "Certificate 19" },
   ];
 
   const renderCarouselItem = (certificate) => {
