@@ -122,3 +122,6 @@ export { default as pgadmin } from "../images/logos/postgress.svg";
 export { default as graphql } from "../images/logos/graphql.png";
 export { default as js } from "../images/logos/js.png";
 export { default as react_saga } from "../images/logos/reduxSaga.png";
+export { default as hugging_face } from "../images/logos/huggingFace.png";
+export { default as fastapi } from "../images/logos/fastapi.jpg";
+export { default as langchain } from "../images/logos/langchain.png";

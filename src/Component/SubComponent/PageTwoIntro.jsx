@@ -37,6 +37,9 @@ import {
   nodeJs,
   mongoDB,
   genAI,
+  fastapi,
+  hugging_face,
+  langchain,
 } from "../../helper/common-images";
 
 const PageTwoIntro = () => {
@@ -97,6 +100,23 @@ const PageTwoIntro = () => {
       numScroll: 1,
     },
   ];
+  const technologies = [
+    { src: fastapi, label: "FastAPI", width: 90 },
+    { src: langchain, label: "LangChain", width: 90 },
+    { src: hugging_face, label: "Hugging Face", width: 60 },
+    { src: django, label: "Django", width: 90 },
+    { src: python, label: "Python", width: 50 },
+    { src: js, label: "JavaScript", width: 50 },
+    { src: reactJS, label: "React JS", width: 50 },
+    { src: html_css, label: "HTML / CSS", width: 50 },
+    { src: mongodb, label: "MongoDB", width: 50 },
+    { src: react_saga, label: "Redux & Saga", width: 65 },
+    { src: bootstrap, label: "Bootstrap", width: 50 },
+    { src: drf_logo, label: "DRF", width: 70 },
+    { src: docker, label: "Docker", width: 60 },
+    { src: graphql, label: "GraphQL", width: 55 },
+    { src: pgadmin, label: "PostgreSQL", width: 70 },
+  ];
   return (
     <div className="flex flex-col h-screen bg-white pb-4">
       <div className="h-10 mt-16 flex justify-center mb-1"></div>
@@ -112,18 +132,40 @@ const PageTwoIntro = () => {
                 className="flex justify-center"
                 imageClassName=" flex justify-center"
               />
-              <div className="">
-                <p className=" text-zinc-500">Who's this guy?</p>
-                <p>
-                  With over three years of professional experience under my
-                  belt, I've become a proficient full stack engineer,
-                  well-versed in an array of stacks encompassing both frontend
-                  and backend development. My journey from student to seasoned
-                  developer has equipped me with a diverse skill set and a deep
-                  understanding of web technologies. Specializing in crafting
-                  dynamic and responsive websites, I excel in building intuitive
-                  user interfaces and implementing innovative features that
-                  enhance user experience.
+              <div className="max-w-xl">
+                {/* Section Label */}
+                <p
+                  className="
+      text-sm
+      uppercase
+      tracking-widest
+      text-customLightAqua
+      font-semibold
+      mb-3
+    "
+                >
+                  Who&apos;s this guy?
+                </p>
+
+                {/* Justified Text */}
+                <p
+                  className="
+     
+      text-base
+      leading-relaxed
+      tracking-wide
+      text-justify
+    "
+                >
+                  With over four years of professional experience, I am a
+                  full-stack engineer specializing in building scalable,
+                  high-performance web applications and integrating LLM-powered
+                  features. I have experience developing responsive user
+                  interfaces, robust backend services, and AI-driven solutions
+                  such as document processing, conversational interfaces, and
+                  retrieval-augmented generation (RAG). I focus on writing
+                  maintainable code, delivering production-ready AI workflows,
+                  and enhancing user experience through thoughtful engineering.
                 </p>
               </div>
             </div>
@@ -137,151 +179,23 @@ const PageTwoIntro = () => {
               </div>
               <div className="w-full h-full mx-5">
                 <div className="grid grid-cols-4 gap-0">
-                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg">
-                    <Image
-                      src={django}
-                      alt="Image"
-                      width="90"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 font-sans text-sm font-semibold text-center ">
-                      Django
+                  {technologies.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg p-2"
+                    >
+                      <Image
+                        src={tech.src}
+                        alt={tech.label}
+                        width={tech.width}
+                        preview
+                        imageClassName="!rounded-full object-contain"
+                      />
+                      <div className="mt-2 text-sm font-sans font-semibold text-center">
+                        {tech.label}
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md m-2">
-                    <Image
-                      src={python}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-1xl font-sans text-sm font-semibold text-center">
-                      Python
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
-                    <Image
-                      src={js}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center text-sm font-sans font-semibold">
-                      JavaScript
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
-                    <Image
-                      src={reactJS}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="rounded-full"
-                    />
-                    <div className="mt-2 text-1xl font-sans text-sm font-semibold text-center">
-                      React JS
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col justify-center items-center shadow-md m-2 rounded-lg ">
-                    <Image
-                      src={html_css}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 font-sans text-sm font-semibold text-center">
-                      HTML/CSS
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center  shadow-md m-2 rounded-lg">
-                    <Image
-                      src={mongodb}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center text-sm font-sans font-semibold">
-                      MongoDB
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={react_saga}
-                      alt="Image"
-                      width="65"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-1xl font-sans text-sm font-semibold text-center">
-                      Redux & Saga
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={bootstrap}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center text-sm font-sans font-semibold">
-                      Bootstrap
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={drf_logo}
-                      alt="Image"
-                      width="70"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center text-sm font-sans font-semibold">
-                      DRF
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={docker}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full mt-2 text-sm"
-                    />
-                    <div className="mt-2 text-center text-sm  font-sans font-semibold">
-                      Docker
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={graphql}
-                      alt="Image"
-                      width="50"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center text-sm justify-center font-sans font-semibold">
-                      GraphQl
-                    </div>
-                  </div>
-                  <div className="flex flex-col justify-center items-center shadow-md mt-3 m-2 rounded-lg">
-                    <Image
-                      src={pgadmin}
-                      alt="Image"
-                      width="70"
-                      preview
-                      imageClassName="!rounded-full"
-                    />
-                    <div className="mt-2 text-center text-sm font-sans font-semibold">
-                      PostgreSQL
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>

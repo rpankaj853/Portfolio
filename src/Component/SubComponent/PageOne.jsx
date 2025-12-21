@@ -103,34 +103,51 @@ const PageOne = (props) => {
       </div>
       <div>
         <h1 className=" text-white text-4xl font-mono font-semibold w-full text-center">
-          Hello, I'm <span className=" text-customPink">Pankaj Rana</span>,
+          Hello, I'm{" "}
+          <span className=" text-customPink drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]">
+            Pankaj Rana
+          </span>
+          ,
         </h1>
         <p className="text-white text-4xl py-1 font-mono font-semibold">
           I'm a Full Stack Engineer{" "}
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-8 group relative">
           <Button
-            className=" text-2xl font-thin border-white mt-3 text-white p-3 rounded-none border-2"
-            label={
-              <>
-                View My Work
-                <span className="ml-4">
-                  <i
-                    className=" pi pi-arrow-right"
-                    style={{ color: "white" }}
-                  ></i>
-                </span>
-              </>
-            }
-            onClick={() => handleScroll()}
             outlined
-            onMouseEnter={(e) => {
-              e.target.querySelector("i").style.transform = "rotate(90deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.querySelector("i").style.transform = "rotate(0deg)";
-            }}
+            onClick={handleScroll}
+            className="
+      text-xl font-mono
+      text-white
+      border-white/70
+      px-8 py-4
+      rounded-none
+      border-2
+      transition-all duration-300
+      hover:border-customPink
+      hover:text-customPink
+      hover:shadow-[0_0_20px_rgba(236,72,153,0.4)]
+      focus:outline-none focus:ring-0
+    "
+            label="View My Work"
           />
+
+          {/* Down Arrow Indicator */}
+          <div
+            className="
+      absolute
+      -bottom-10
+      left-1/2
+      -translate-x-1/2
+      opacity-0
+      transition-all duration-300
+      group-hover:opacity-100
+      group-hover:translate-y-2
+      text-customPink
+    "
+          >
+            <i className="pi pi-arrow-down text-2xl" />
+          </div>
         </div>
       </div>
     </div>
