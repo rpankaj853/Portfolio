@@ -66,6 +66,12 @@ import {
   dog,
   dog1,
   dog2,
+  prnexus1,
+  prnexus,
+  prnexus3,
+  prnexus4,
+  prnexus5,
+  prnexusSecondDummy,
 } from "../../helper/common-images";
 
 import "../../css/galleria.css";
@@ -75,6 +81,14 @@ const PageThirdProjects = () => {
   const [visible, setVisible] = useState(false);
 
   const images = [
+    {
+      src: prnexus,
+      alt: "Image 1",
+      name: "prnexus",
+      category: "BE",
+      Label: "PRNexus AI",
+      skills: "React / Python / LLM",
+    },
     {
       src: todo,
       alt: "Image 1",
@@ -183,6 +197,17 @@ const PageThirdProjects = () => {
   ];
 
   const projectList = {
+    prnexus: {
+      title: "PRNexus Ai Services",
+      desc: "PRNexus is a suite of AI tools that lets you extract knowledge, get answers, and automate repetitive tasks — all in one place. Work smarter with any content using powerful multi-model AI capabilities.",
+      imagesList: [
+        { src: prnexus1, alt: "Image 1" },
+        { src: prnexusSecondDummy, alt: "Image 2" },
+        { src: prnexus3, alt: "Image 3" },
+        { src: prnexus4, alt: "Image 4" },
+        { src: prnexus5, alt: "Image 5" },
+      ],
+    },
     cv: {
       title: "CV Builder",
       desc: "Empower job seekers with a user-friendly platform for creating professional resumes. Optimize chances in the job market with customizable templates and intuitive tools",

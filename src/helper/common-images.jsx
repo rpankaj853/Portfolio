@@ -87,6 +87,15 @@ export { default as dog } from "../images/Projects-images/dog-gallery/dog.png";
 export { default as dog1 } from "../images/Projects-images/dog-gallery/dog1.png";
 export { default as dog2 } from "../images/Projects-images/dog-gallery/dog2.png";
 
+// prnexus
+
+export { default as prnexus1 } from "../images/Projects-images/prnexus/prnexus1.png";
+export { default as prnexus } from "../images/Projects-images/prnexus/prnexus2.png";
+export { default as prnexusSecondDummy } from "../images/Projects-images/prnexus/prnexus2.2.png";
+export { default as prnexus3 } from "../images/Projects-images/prnexus/prnexus3.png";
+export { default as prnexus4 } from "../images/Projects-images/prnexus/prnexus4.png";
+export { default as prnexus5 } from "../images/Projects-images/prnexus/prnexus5.png";
+
 // Certificates
 export { default as mongoDB } from "../images/Certificates/mongodb.jpg";
 export { default as c_plus_plus } from "../images/Certificates/c_plus_solo.png";
@@ -107,13 +116,18 @@ export { default as fullStackUdemy } from "../images/Certificates/fullstack_udem
 export { default as apolloGraphql } from "../images/Certificates/apolloGraphql.jpg";
 export { default as nodeJs } from "../images/Certificates/nodeJS.jpg";
 export { default as genAI } from "../images/Certificates/genAI.jpg";
+export { default as aws } from "../images/Certificates/aws.jpg";
+export { default as databricks } from "../images/Certificates/databricks.png";
+export { default as claudeAgentSkills } from "../images/Certificates/claude-agent-skills.jpg";
+export { default as claudeCodeAction } from "../images/Certificates/claude-code-action.jpg";
+export { default as claudeCowork } from "../images/Certificates/claude-cowork.jpg";
+export { default as awsUdemy } from "../images/Certificates/aws-udemy.jpg";
 
 // logos
 export { default as reactJS } from "../images/logos/React.webp";
 export { default as django } from "../images/logos/django-logo.png";
 export { default as python } from "../images/logos/python.webp";
 export { default as docker } from "../images/logos/docker.png";
-// export { default as html } from "../images/logos/html.jpeg";
 export { default as mongodb } from "../images/logos/mongodb.svg";
 export { default as html_css } from "../images/logos/html_css.png";
 export { default as bootstrap } from "../images/logos/bootstrap.png";
@@ -125,3 +139,4 @@ export { default as react_saga } from "../images/logos/reduxSaga.png";
 export { default as hugging_face } from "../images/logos/huggingFace.png";
 export { default as fastapi } from "../images/logos/fastapi.jpg";
 export { default as langchain } from "../images/logos/langchain.png";
+export { default as awsLogo } from "../images/logos/aws-logo.png";

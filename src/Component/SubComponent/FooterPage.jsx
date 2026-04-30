@@ -63,7 +63,7 @@ const FooterPage = () => {
           />
         </div>
         <p className="flex justify-center mt-3">
-          Pankaj Rana <span className=" text-customLightAqua pl-2"> ©2025</span>
+          Pankaj Rana <span className=" text-customLightAqua pl-2"> ©2026</span>
         </p>
       </div>
     </div>

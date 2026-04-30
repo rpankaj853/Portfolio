@@ -11,6 +11,9 @@ module.exports = {
         customLightAqua: "#06c2c9",
         customPartical: "#252934",
       },
+      fontFamily: {
+        conthrax: ["Conthrax", "sans-serif"],
+      },
       screens: {
         sm: "640px",
         md: "768px",

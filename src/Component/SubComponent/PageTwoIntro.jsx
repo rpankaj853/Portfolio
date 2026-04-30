@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Splitter, SplitterPanel } from "primereact/splitter";
 import { Carousel } from "primereact/carousel";
 import { Image } from "primereact/image";
+import { Dialog } from "primereact/dialog";
+import { Button } from "primereact/button";
 // Uploaded Images
 import myPic from "../../images/mypic2.png";
 
@@ -40,44 +42,141 @@ import {
   fastapi,
   hugging_face,
   langchain,
+  aws,
+  databricks,
+  claudeAgentSkills,
+  claudeCodeAction,
+  claudeCowork,
+  awsLogo,
+  awsUdemy,
 } from "../../helper/common-images";
 
 const PageTwoIntro = () => {
+  const [previewCert, setPreviewCert] = useState(null);
   const certificates = [
-    { src: pythonHacker, alt: "Certificate 1" },
-    { src: reactHacker, alt: "Certificate 2" },
-    { src: apolloGraphql, alt: "Certificate 3" },
-    { src: mongoDB, alt: "Certificate 4" },
-    { src: djUdemy, alt: "Certificate 5" },
-    { src: nodeJs, alt: "Certificate 6" },
-    { src: jQuerySolo, alt: "Certificate 7" },
-    { src: jsSolo, alt: "Certificate 8" },
-    { src: phpSolo, alt: "Certificate 9" },
-    { src: c_plus_plus, alt: "Certificate 10" },
-    { src: pythonSolo, alt: "Certificate 11" },
-    { src: python3, alt: "Certificate 12" },
-    { src: html5, alt: "Certificate 13" },
-    { src: sqlSolo, alt: "Certificate 14" },
-    { src: fullStackUdemy, alt: "Certificate 15" },
-    { src: cssSolo, alt: "Certificate 16" },
-    { src: htmlSolo, alt: "Certificate 17" },
-    { src: djPython, alt: "Certificate 18" },
-    { src: genAI, alt: "Certificate 19" },
+    {
+      src: pythonHacker,
+      alt: "Python Hacker Certificate",
+      label: "Python for Pentesters – Hacker's Academy",
+    },
+    {
+      src: reactHacker,
+      alt: "React Hacker Certificate",
+      label: "React – Hacker's Academy",
+    },
+    {
+      src: apolloGraphql,
+      alt: "Apollo GraphQL Certificate",
+      label: "Apollo Graph Developer – Associate",
+    },
+    {
+      src: aws,
+      alt: "AWS Certificate",
+      label: "AWS Certified Cloud Practitioner",
+    },
+    {
+      src: databricks,
+      alt: "Databricks Certificate",
+      label: "Databricks Lakehouse Fundamentals",
+    },
+    {
+      src: claudeAgentSkills,
+      alt: "Claude Agent Skills Certificate",
+      label: "Build with Claude – Agent Skills",
+    },
+    {
+      src: claudeCodeAction,
+      alt: "Claude Code in Action Certificate",
+      label: "Claude Code in Action",
+    },
+    {
+      src: claudeCowork,
+      alt: "Claude Coworker Certificate",
+      label: "Claude as a Coworker",
+    },
+    { src: mongoDB, alt: "MongoDB Certificate", label: "MongoDB Basics" },
+    {
+      src: djUdemy,
+      alt: "Django Udemy Certificate",
+      label: "Django – The Complete Web Developer (Udemy)",
+    },
+    {
+      src: nodeJs,
+      alt: "Node.js Certificate",
+      label: "Node.js – The Complete Guide",
+    },
+    {
+      src: jQuerySolo,
+      alt: "jQuery Certificate",
+      label: "jQuery – Solo Learn",
+    },
+    {
+      src: jsSolo,
+      alt: "JavaScript Certificate",
+      label: "JavaScript – Solo Learn",
+    },
+    { src: phpSolo, alt: "PHP Certificate", label: "PHP – Solo Learn" },
+    { src: c_plus_plus, alt: "C++ Certificate", label: "C++ – Solo Learn" },
+    {
+      src: pythonSolo,
+      alt: "Python Solo Learn Certificate",
+      label: "Python – Solo Learn",
+    },
+    {
+      src: python3,
+      alt: "Python 3 Certificate",
+      label: "Python 3 – Solo Learn",
+    },
+    {
+      src: html5,
+      alt: "HTML5 Certificate",
+      label: "HTML5 Application Development",
+    },
+    { src: sqlSolo, alt: "SQL Certificate", label: "SQL – Solo Learn" },
+    {
+      src: fullStackUdemy,
+      alt: "Full Stack Udemy Certificate",
+      label: "Full Stack Web Development Bootcamp (Udemy)",
+    },
+    { src: cssSolo, alt: "CSS Certificate", label: "CSS – Solo Learn" },
+    { src: htmlSolo, alt: "HTML Certificate", label: "HTML – Solo Learn" },
+    {
+      src: djPython,
+      alt: "Django Python Certificate",
+      label: "Django with Python",
+    },
+    {
+      src: genAI,
+      alt: "Generative AI Certificate",
+      label: "Generative AI Fundamentals",
+    },
+    {
+      src: awsUdemy,
+      alt: "AWS Udemy Certificate",
+      label: "AWS – Complete Guide (Udemy)",
+    },
   ];
 
-  const renderCarouselItem = (certificate) => {
-    return (
-      <div className="py-2">
-        <Image
-          src={certificate.src}
-          preview
-          width="200"
-          alt={certificate.alt}
-          imageClassName="rounded"
-        />
-      </div>
-    );
+  const handleDownload = (certificate) => {
+    const link = document.createElement("a");
+    link.href = certificate.src;
+    link.download = `${certificate.label}.png`;
+    link.click();
   };
+
+  const renderCarouselItem = (certificate) => (
+    <div
+      className="py-2 cursor-pointer"
+      onClick={() => setPreviewCert(certificate)}
+    >
+      <img
+        src={certificate.src}
+        alt={certificate.alt}
+        width="200"
+        className="rounded"
+      />
+    </div>
+  );
   const responsiveOptions = [
     {
       breakpoint: "1400px",
@@ -116,6 +215,7 @@ const PageTwoIntro = () => {
     { src: docker, label: "Docker", width: 60 },
     { src: graphql, label: "GraphQL", width: 55 },
     { src: pgadmin, label: "PostgreSQL", width: 70 },
+    { src: awsLogo, label: "AWS Services", width: 70 },
   ];
   return (
     <div className="flex flex-col h-screen bg-white pb-4">
@@ -144,7 +244,7 @@ const PageTwoIntro = () => {
       mb-3
     "
                 >
-                  Who&apos;s this guy?
+                  <span className="font-conthrax">Who&apos;s this guy?</span>
                 </p>
 
                 {/* Justified Text */}
@@ -173,7 +273,7 @@ const PageTwoIntro = () => {
           <SplitterPanel className="mb-3">
             <div className="flex flex-wrap">
               <div className="flex justify-center h-12 mb-3 w-full">
-                <p className=" text-2xl !h-6 font-sans font-semibold">
+                <p className=" text-2xl !h-6 font-conthrax">
                   Technologies I've Worked With
                 </p>
               </div>
@@ -191,7 +291,7 @@ const PageTwoIntro = () => {
                         preview
                         imageClassName="!rounded-full object-contain"
                       />
-                      <div className="mt-2 text-sm font-sans font-semibold text-center">
+                      <div className="mt-2 text-sm font-conthrax font-semibold text-center">
                         {tech.label}
                       </div>
                     </div>
@@ -203,7 +303,7 @@ const PageTwoIntro = () => {
         </Splitter>
       </div>
       <div className="h-60 w-full mt-3">
-        <h3 className="flex text-2xl font-sans font-semibold justify-center">
+        <h3 className="flex text-2xl font-conthrax justify-center">
           Certificates
         </h3>
         <div className="card pt-2 mx-5 mb-3">
@@ -217,6 +317,32 @@ const PageTwoIntro = () => {
           />
         </div>
       </div>
+
+      <Dialog
+        visible={!!previewCert}
+        onHide={() => setPreviewCert(null)}
+        style={{ width: "80vw", maxWidth: "900px" }}
+        header={
+          <div className="flex items-center justify-between pr-4">
+            <span className="font-conthrax text-base">
+              {previewCert?.label}
+            </span>
+            <Button
+              icon="pi pi-download"
+              className="p-button-sm p-button-outlined"
+              onClick={() => handleDownload(previewCert)}
+            />
+          </div>
+        }
+      >
+        {previewCert && (
+          <img
+            src={previewCert.src}
+            alt={previewCert.alt}
+            className="w-full rounded"
+          />
+        )}
+      </Dialog>
     </div>
   );
 };
